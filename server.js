@@ -32,7 +32,7 @@ hbs.registerHelper('screamIt',(text)=>{
 
 app.get('/', (req, res)=>{ 
     var context = {         
-        pageTitle: 'Home Page',
+        pageTitle: 'Home',
         dis: 'Hello there, we are home',
     }; 
     res.render('home.hbs',context)
@@ -44,7 +44,7 @@ app.get('/about',(req, res)=>{
     })
 });
 
-app.get('/projects',(req, res)=>{
+app.get('/project',(req, res)=>{
     res.render('project.hbs',{
         pageTitle: 'Projects',
         dis: "Project linkes here please"
