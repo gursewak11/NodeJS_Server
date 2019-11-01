@@ -33,26 +33,27 @@ hbs.registerHelper('screamIt',(text)=>{
 app.get('/', (req, res)=>{ 
     var context = {         
         pageTitle: 'Home Page',
-        dis: 'Hello I am Lucifer Morning Star',
+        dis: 'Hello there, we are home',
     }; 
     res.render('home.hbs',context)
 });
 
 app.get('/about',(req, res)=>{     
     res.render('about.hbs',{
-        pageTitle: 'About Page',
+        pageTitle: 'About',
     })
+});
+
+app.get('/projects',(req, res)=>{
+    res.render('project.hbs',{
+        pageTitle: 'Projects',
+        dis: "Project linkes here please"
+    });
 });
 
 app.get('/bad', (req, res)=>{
     res.send({
         message: "Error message"
-    });
-});
-
-app.get('/projects',(req, res)=>{
-    res.render('project.hbs',{
-        
     });
 });
 
